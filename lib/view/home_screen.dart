@@ -12,7 +12,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     var calculaterpovider = Provider.of<HomeViewModel>(context, listen: false);
-
     return Scaffold(
       appBar: AppBar(title: const Text('Flutter Calculator')),
       body: Column(
@@ -109,7 +108,7 @@ _buildButton(
           ),
         ),
         onPressed: () {
-          calculaterpovider.onButtonPressed(calculaterpovider.displayText);
+          calculaterpovider.onButtonPressed(buttonText);
         }),
   );
 }
